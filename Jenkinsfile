@@ -9,10 +9,8 @@ pipeline{
             steps {
                     bat '''mvn clean install '''
                 }
-
-            }
         }
-    stage ('Test Stage') {
+        stage ('Test Stage') {
 
             steps {
                 bat '''mvn test '''
