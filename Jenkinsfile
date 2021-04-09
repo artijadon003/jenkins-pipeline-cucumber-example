@@ -7,10 +7,7 @@ pipeline{
         stage ('Compile Stage') {
 
             steps {
-
-                withMaven(maven: 'M3') {
-                    sh 'mvn clean install'
-
+                    bat '''mvn clean install '''
                 }
 
             }
@@ -18,12 +15,7 @@ pipeline{
     stage ('Test Stage') {
 
             steps {
-
-                withMaven(maven: 'M3') {
-                    sh 'mvn test'
-
-                }
-
+                bat '''mvn test '''
             }
         }
 
